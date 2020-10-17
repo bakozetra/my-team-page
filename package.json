@@ -1,0 +1,25 @@
+{
+  "name": "my-team-page",
+  "version": "1.0.0",
+  "description": "![screenshot](screenshot.png)",
+  "main": "index.js",
+  "scripts": {
+    "css": "node-sass scss -o webroot/css",
+    "css:watch": "npm run css && node-sass scss -w -o webroot/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bakozetra/my-team-page.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bakozetra/my-team-page/issues"
+  },
+  "homepage": "https://github.com/bakozetra/my-team-page#readme",
+  "dependencies": {
+    "node-sass": "^4.14.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
+  }
+}

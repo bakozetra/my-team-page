@@ -1,0 +1,62 @@
+body {
+  margin: 0; }
+
+li {
+  list-style: none; }
+
+ul {
+  padding-left: 0; }
+
+div {
+  display: grid; }
+
+li {
+  padding-right: 2rem;
+  padding-bottom: 2rem; }
+
+ul {
+  display: grid;
+  grid-template-areas: "firt second" "third four" "five  six"; }
+
+.ImageOne {
+  grid-area: first; }
+
+.ImageTwo {
+  grid-area: second;
+  padding-top: 2rem; }
+
+.ImageThree {
+  grid-area: third; }
+
+.ImageFour {
+  grid-area: four; }
+
+.ImageFive {
+  grid-area: five; }
+
+.ImageSix {
+  grid-area: six; }
+
+li > img {
+  max-width: 100%;
+  width: 80vw;
+  height: calc(80vw * 476 / 694);
+  vertical-align: middle; }
+
+@media (min-width: 375px) {
+  ul {
+    display: grid;
+    grid-template-areas: "firt second third" "four five  six"; }
+  .ImageOne {
+    grid-area: first; }
+  .ImageTwo {
+    grid-area: second; }
+  .ImageThree {
+    grid-area: third; }
+  .ImageFour {
+    grid-area: four; }
+  .ImageFive {
+    grid-area: five;
+    padding-top: 4rem; }
+  .ImageSix {
+    grid-area: six; } }
