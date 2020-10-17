@@ -1,4 +1,4 @@
-body {
+body, h1, h2, p {
   margin: 0; }
 
 li {
@@ -7,16 +7,26 @@ li {
 ul {
   padding-left: 0; }
 
+h1 {
+  font-size: 45px; }
+
+@media (min-width: 375px) {
+  header {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 4rem; }
+  .content {
+    width: 500px; }
+  .content p {
+    font-size: 20px; } }
+
 div {
   display: grid; }
 
-li {
-  padding-right: 2rem;
-  padding-bottom: 2rem; }
-
 ul {
   display: grid;
-  grid-template-areas: "firt second" "third four" "five  six"; }
+  grid-template-areas: "firt second" "third four" "five  six";
+  column-gap: 3rem; }
 
 .ImageOne {
   grid-area: first; }
@@ -29,34 +39,64 @@ ul {
   grid-area: third; }
 
 .ImageFour {
-  grid-area: four; }
+  grid-area: four;
+  padding-top: 2rem; }
 
 .ImageFive {
   grid-area: five; }
 
 .ImageSix {
-  grid-area: six; }
+  grid-area: six;
+  padding-top: 2rem; }
 
 li > img {
   max-width: 100%;
-  width: 80vw;
-  height: calc(80vw * 476 / 694);
-  vertical-align: middle; }
+  vertical-align: middle;
+  font-size: 25px; }
+
+li {
+  position: relative; }
+
+small {
+  position: absolute;
+  writing-mode: vertical-lr;
+  right: -1rem;
+  text-transform: uppercase; }
+
+ul > li:nth-of-type(2) small {
+  top: 2rem; }
+
+ul > li:nth-of-type(4) small {
+  top: 2rem; }
+
+ul > li:nth-of-type(6) small {
+  top: 2rem; }
 
 @media (min-width: 375px) {
+  small {
+    right: -1.5rem; }
   ul {
     display: grid;
-    grid-template-areas: "firt second third" "four five  six"; }
-  .ImageOne {
-    grid-area: first; }
-  .ImageTwo {
-    grid-area: second; }
-  .ImageThree {
-    grid-area: third; }
+    grid-template-areas: "firt second third" "four five  six";
+    padding-left: 10rem;
+    padding-right: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+    column-gap: 7rem; }
   .ImageFour {
-    grid-area: four; }
+    grid-area: four;
+    padding-top: 0; }
   .ImageFive {
     grid-area: five;
     padding-top: 4rem; }
   .ImageSix {
-    grid-area: six; } }
+    grid-area: six;
+    padding-top: 0rem; }
+  ul > li:nth-of-type(5) small {
+    top: 4rem; }
+  ul > li:nth-of-type(6) small {
+    top: 2rem; }
+  ul > li:nth-of-type(4) small {
+    top: 0rem; }
+  ul > li:nth-of-type(6) small {
+    top: 0rem; } }

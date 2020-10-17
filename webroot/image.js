@@ -3,7 +3,11 @@ import React from 'react'
 function Image (props) {
   return (
  <li>
-   <img src ={props.src} className = {props.alt}/>{props.name}
+    <p>
+    {props.name && <small>{props.job}</small>}
+    </p>
+    <img src ={props.src} className={props.alt}/>
+    <p className = "name">{props.name}</p>
  </li>
   )
 }
