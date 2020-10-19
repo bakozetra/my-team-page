@@ -1,3 +1,4 @@
+@import 'variable';
 div {
   display: grid;
 }
@@ -6,7 +7,9 @@ ul {
   grid-template-areas: "firt second"
                         "third four"
                         "five  six" ;
-  column-gap: 3rem;
+  column-gap: $padding + 1;
+  padding-left: $padding;
+  padding-right: $padding;
 }
 .ImageOne { 
   grid-area: first ;
@@ -14,7 +17,7 @@ ul {
 
 .ImageTwo {
  grid-area: second ;
- padding-top: 2rem;
+ padding-top:$padding;
 }
 
 .ImageThree {
@@ -23,7 +26,7 @@ ul {
 
 .ImageFour {
  grid-area: four ;
- padding-top: 2rem;
+ padding-top: $padding;
 }
 
 .ImageFive {
@@ -31,15 +34,12 @@ ul {
 }
 .ImageSix {
  grid-area:six ;
- padding-top: 2rem;
+ padding-top: $padding;
 }
 
 li > img {
   max-width: 100%;
-  // width: 80vw;
-  // height:calc(80vw * 476 / 694);
   vertical-align: middle;
-  font-size: 25px;
 }
 
 li {
@@ -47,23 +47,20 @@ li {
 }
 small {
   position: absolute;
-  // top: 0rem;
   writing-mode: vertical-lr;
   right: -1rem;
   text-transform: uppercase;
 }
 
 ul > li:nth-of-type(2) small {
-  top : 2rem;
+  top : $padding;
 }
 ul > li:nth-of-type(4) small {
-  top : 2rem;
+  top : $padding;
 }
 ul > li:nth-of-type(6) small {
-  top : 2rem;
+  top : $padding;
 }
-
-
 
 @media(min-width : 375px) {
   small {
@@ -73,11 +70,8 @@ ul > li:nth-of-type(6) small {
     display: grid;
     grid-template-areas: "firt second third"
                         "four five  six" ;
-    padding-left: 10rem;
-    padding-right: 10rem;
-    margin-left: auto;
-    margin-right: auto;
-    column-gap: 7rem;
+    padding-top: $padding;
+    column-gap: $padding * 3;
   }
   .ImageFour {
     grid-area: four ;
@@ -85,17 +79,17 @@ ul > li:nth-of-type(6) small {
    }
   .ImageFive {
     grid-area:five;
-    padding-top: 4rem;
+    padding-top: $padding * 2;
   }
   .ImageSix {
     grid-area:six ;
     padding-top: 0rem;
    }
    ul > li:nth-of-type(5) small {
-    top : 4rem;
+    top : $padding * 2;
   }
   ul > li:nth-of-type(6) small {
-    top : 2rem;
+    top : $padding;
   }
    ul > li:nth-of-type(4) small {
     top : 0rem;

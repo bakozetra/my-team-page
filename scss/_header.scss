@@ -1,17 +1,29 @@
+ @import 'variable';
+ header {
+   padding-left: $padding;
+   padding-bottom: $padding;
+ }
  h1 {
-   font-size: 45px;
+   padding-bottom: $padding;
  }
 @media(min-width: 375px ) {
-  header {
+  header , #root {
+    width: 100%;
+    margin:0;
+  }
+  .container , ul {
+    max-width: 80% ;
+    margin-inline-end: auto;
+    margin-inline-start: auto;
     display: flex;
     justify-content: space-around;
-    padding-top: 4rem;
+    padding-top: $padding * 2;
   }
 
   .content  {
-    width: 500px;
+    width: 370px;
   }
-  .content p {
-    font-size: 20px;
+  h2 {
+    padding-bottom: $padding / 2 ;
   }
 }

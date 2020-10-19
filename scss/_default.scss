@@ -1,3 +1,4 @@
+@import 'variable';
 body ,h1 , h2 , p {
   margin: 0;
 }
@@ -6,4 +7,10 @@ li {
 }
 ul {
   padding-left: 0;
+}
+p,h2 {
+  font-size: 18px;
+}
+h1 {
+  font-size: 36px;
 }

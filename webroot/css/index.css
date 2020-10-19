@@ -7,18 +7,34 @@ li {
 ul {
   padding-left: 0; }
 
+p, h2 {
+  font-size: 18px; }
+
 h1 {
-  font-size: 45px; }
+  font-size: 36px; }
+
+header {
+  padding-left: 2rem;
+  padding-bottom: 2rem; }
+
+h1 {
+  padding-bottom: 2rem; }
 
 @media (min-width: 375px) {
-  header {
+  header, #root {
+    width: 100%;
+    margin: 0; }
+  .container, ul {
+    max-width: 80%;
+    margin-inline-end: auto;
+    margin-inline-start: auto;
     display: flex;
     justify-content: space-around;
     padding-top: 4rem; }
   .content {
-    width: 500px; }
-  .content p {
-    font-size: 20px; } }
+    width: 370px; }
+  h2 {
+    padding-bottom: 1rem; } }
 
 div {
   display: grid; }
@@ -26,7 +42,9 @@ div {
 ul {
   display: grid;
   grid-template-areas: "firt second" "third four" "five  six";
-  column-gap: 3rem; }
+  column-gap: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem; }
 
 .ImageOne {
   grid-area: first; }
@@ -51,8 +69,7 @@ ul {
 
 li > img {
   max-width: 100%;
-  vertical-align: middle;
-  font-size: 25px; }
+  vertical-align: middle; }
 
 li {
   position: relative; }
@@ -78,11 +95,8 @@ ul > li:nth-of-type(6) small {
   ul {
     display: grid;
     grid-template-areas: "firt second third" "four five  six";
-    padding-left: 10rem;
-    padding-right: 10rem;
-    margin-left: auto;
-    margin-right: auto;
-    column-gap: 7rem; }
+    padding-top: 2rem;
+    column-gap: 6rem; }
   .ImageFour {
     grid-area: four;
     padding-top: 0; }
